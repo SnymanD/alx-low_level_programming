@@ -7,14 +7,14 @@
 
 int main(void)
 {
-	char lower_case;
+	char low_case;
 
-	for (lower_case = 'a'; lower_case <= 'Z'; lower_case++)
-		putchar(lower_case);
+	for (low_case = 'a'; low_case <= 'z'; low_case++)
+	putchar(low_case);
 
-	for (lower_case = 'A'; lower_case <= 'Z'; lower_case++)
-	putchar(lower_case);
+	for (low_case = 'A'; low_case <= 'Z'; low_case++)
+	putchar(low_case);
 	putchar('\n');
-
+	
 	return (0);
 }
