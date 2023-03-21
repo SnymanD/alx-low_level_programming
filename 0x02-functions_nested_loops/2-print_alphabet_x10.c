@@ -1,6 +1,6 @@
-#include <main.h>
-/**
- * main - A function that prints 10 times the alphabet, in lowercase
+#include "main.h"
+/*
+ * Description:  print_alphabet_x10 - print 10 times alphabet..
  * Return: Always 0 (Success)
  */
 

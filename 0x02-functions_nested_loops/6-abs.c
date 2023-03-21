@@ -1,6 +1,7 @@
-#include <main.h>
+#include "main.h"
 /**
- * main - a function that computes absolute value..
+ * Descriptio: _abs - Function that computes absolute value.
+ * @x: The character to be checked
  * Return: Absolute value
  */
 
@@ -14,6 +15,6 @@ int _abs(int x)
 	{
 		return (x * -1);
 	}
-	_putchar('\n')
+	_putchar('\n');
 }
 

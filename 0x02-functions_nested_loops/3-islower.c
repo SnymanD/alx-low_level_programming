@@ -1,7 +1,8 @@
-#include <main.h>
+#include "main.h"
 /**
- * main - A function that prints 10 times the alphabet, in lowercase.
- * Return: Always 0 (Success)
+ * Description: _islower - A function that checks for lowe case.
+ * @c: The character to be checked
+ * Return: 1 if c is lower or 0 otherwise
  */
 
 int _islower(int c)
@@ -11,7 +12,7 @@ int _islower(int c)
 		return (1);
 
 	}
-	else 
+	else
 	{
 		return (0);
 	}
