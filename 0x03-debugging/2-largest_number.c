@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * largest_number - returns the largest number
  * @a: The first number
@@ -27,5 +28,6 @@ int largest_number(int a, int b, int c)
 	{
 		largest = c;
 	}
+
 	return (largest);
 }
