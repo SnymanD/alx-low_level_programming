@@ -5,6 +5,7 @@
  * _sqrt_recursion - Prints a natural square root
  * of a number
  * @n: A number to be used
+ * @x: Iterate
  * Return: The results (int)
  */
 
