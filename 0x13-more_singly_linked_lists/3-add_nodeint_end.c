@@ -13,7 +13,7 @@ node *get_tail(node *head)
 
 	if (head == NULL)
 		return (head);
-	adjacent = get_tail(head->next);
+	next = get_tail(head->next);
 	if (next == NULL)
 		return (head);
 	return (next);
