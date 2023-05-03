@@ -12,7 +12,7 @@ size_t get_size(const listint_t *h)
 {
 	if (h == (void *)0)
 		return (0);
-	return (1 + get_size(h->adjacent));
+	return (1 + get_size(h->next));
 }
 
 /**
@@ -28,7 +28,7 @@ node *get_node(node *head, unsigned int index)
 		return (NULL);
 	if (index == 0)
 		return (head);
-	return (get_node(head->adjacent, index - 1));
+	return (get_node(head->next, index - 1));
 }
 
 /**
@@ -53,14 +53,14 @@ node *insert_nodeint_at_index1(node **head, unsigned int idx, int n)
 	else
 	{
 		v = get_node(*head, idx - 1);
-		u = v->adjacent;
+		u = v->next;
 	}
 	num = malloc(sizeof(node));
 	if (num == NULL)
 		return (NULL);
 	num->n = n;
-	v->adjacent = num;
-	num->adjacent = u;
+	v->next = num;
+	num->next = u;
 	return (num);
 }
 
@@ -77,21 +77,21 @@ node *insert_nodeint_at_index(node **head, unsigned int idx, int n)
 		if (num == NULL)
 			return (NULL);
 		num->n = n;
-		num->adjacent = *head;
+		num->next = *head;
 		*head = num;
 		return (num);
 	}
 	for (i = 0; i < idx - 1; i++)
 	{
-		if (u == NULL || u->adjacent == NULL)
+		if (u == NULL || u->next == NULL)
 			return (NULL);
-		u = u->adjacent;
+		u = u->next;
 	}
 	num = malloc(sizeof(node));
 	if (num == NULL)
 		return (NULL);
 	num->n = n;
-	num->adjacent = u->adjacent;
-	u->adjacent = num;
+	num->next = u->next;
+	u->next = num;
 	return (num);
 }

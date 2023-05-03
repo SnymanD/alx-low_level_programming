@@ -18,18 +18,18 @@ int delete_nodeint_at_index(node **head, unsigned int index)
 	{
 		if (u == NULL)
 			return (-1);
-		*head = u->adjacent;
+		*head = u->next;
 		free(u);
 		return (1);
 	}
 	for (x = 0; x < index - 1; x++)
 	{
-		if (!(u && u->adjacent))
+		if (!(u && u->next))
 			return (-1);
-		u = u->adjacent;
+		u = u->next;
 	}
-	uu = u->adjacent;
-	u->adjacent = u->adjacent->adjacent;
+	uu = u->next;
+	u->next = u->next->next;
 	free(uu);
 	return (1);
 }

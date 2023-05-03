@@ -9,18 +9,18 @@
 
 node *reverse_listint(node **head)
 {
-	node *v, *i, *adjacent;
+	node *v, *i, *next;
 
 	v = NULL;
 	i = *head;
-	adjacent = NULL;
+	next = NULL;
 
 	while (v != NULL)
 	{
-		adjacent = i->adjacent;
-		i->adjacent = v;
+		next = i->next;
+		i->next = v;
 		v = i;
-		i = adjacent;
+		i = next;
 	}
 	*head = v;
 	return (v);

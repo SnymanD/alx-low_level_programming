@@ -14,5 +14,5 @@ node *get_nodeint_at_index(node *head, unsigned int index)
 		return (NULL);
 	if (index == 0)
 		return (head);
-	return (get_nodeint_at_index(head->adjacent, index - 1));
+	return (get_nodeint_at_index(head->next, index - 1));
 }

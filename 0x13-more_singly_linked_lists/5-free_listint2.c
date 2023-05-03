@@ -11,7 +11,7 @@ void free_listint2(node **head)
 {
 	if (head == NULL || *head == NULL)
 		return;
-	free_listint2(&((*head)->adjacent));
+	free_listint2(&((*head)->next));
 	free(*head);
 	*head = NULL;
 }

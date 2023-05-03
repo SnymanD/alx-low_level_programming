@@ -11,5 +11,5 @@ int sum_listint(node *head)
 {
 	if (head == NULL)
 		return (0);
-	return (head->n + sum_listint(head->adjacent));
+	return (head->n + sum_listint(head->next));
 }

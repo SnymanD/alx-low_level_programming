@@ -13,10 +13,10 @@ node *find_listint_loop(node *head)
 
 	x = y = head;
 
-	while (y && y->adjacent)
+	while (y && y->next)
 	{
-		x = x->adjacent;
-		y = y->adjacent->adjacent;
+		x = x->next;
+		y = y->next->next;
 
 		if (y == x)
 		{

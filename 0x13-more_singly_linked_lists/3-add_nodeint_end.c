@@ -9,14 +9,14 @@
 
 node *get_tail(node *head)
 {
-	node *adjacent;
+	node *next;
 
 	if (head == NULL)
 		return (head);
-	adjacent = get_tail(head->adjacent);
-	if (adjacent == NULL)
+	adjacent = get_tail(head->next);
+	if (next == NULL)
 		return (head);
-	return (adjacent);
+	return (next);
 }
 
 /**
@@ -34,10 +34,10 @@ node *add_nodeint_end(node **head, const int n)
 	if (num == NULL)
 		return (NULL);
 	num->n = n;
-	num->adjacent = NULL;
+	num->next = NULL;
 	if (*head == NULL)
 		*head = num;
 	else
-		get_tail(*head)->adjacent = num;
+		get_tail(*head)->next = num;
 	return (num);
 }

@@ -16,7 +16,7 @@ int pop_listint(node **head)
 
 	u = *head;
 	v = (*head)->n;
-	*head = (*head)->adjacent;
+	*head = (*head)->next;
 	free(u);
 	return (v);
 }
